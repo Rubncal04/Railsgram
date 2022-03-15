@@ -26,6 +26,10 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'
 
+# Using carrier_wave
+gem 'carrierwave'
+gem 'mini_magick'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

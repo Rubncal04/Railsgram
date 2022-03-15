@@ -1,6 +1,7 @@
-<div class="col">
+<div class="col-4">
   <figure class="figure">
-    <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=612x612&w=0&h=jPhUdbj_7nWHUp0dsKRf4DMGaHiC16kg_FSjRRGoZEI=" class="figure-img img-fluid rounded">
+    <%= image_tag image.picture.medium.url, class: 'figure-img img-fluid rounded'%>
+    <!-- <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=612x612&w=0&h=jPhUdbj_7nWHUp0dsKRf4DMGaHiC16kg_FSjRRGoZEI=" class="figure-img img-fluid rounded"> -->
     <figcaption class="figure-caption"><%=image.description%><br>
       <%=link_to 'Edit', edit_image_path(image)%>
       <%=link_to 'Delete', image, method: :delete, data: {confirm: 'Are you Sure?'}%><br>
