@@ -1,5 +1,7 @@
-<%=form_for @image do |f|%>
-  <%=f.label :description%><br>
-  <%=f.text_field :description%><br>
-  <%=f.submit%>
-<%end%>
+<div class="form-group">
+  <%=form_for @image do |f|%>
+    <%=f.label :description%><br>
+    <%=f.text_field :description, class: 'form-control'%><br>
+    <%=f.submit 'Send', :class =>"btn btn-outline-primary"%>
+  <%end%>
+</div>
