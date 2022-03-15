@@ -12,8 +12,11 @@ class ImagesController < ApplicationController
   def create
     # render plain: params[:image].inspect
     @image = Image.new image_params
-    @image.save
-    redirect_to @image
+    if @image.save
+      return redirect_to images_path
+    end
+
+    render :new
   end
 
   def show
