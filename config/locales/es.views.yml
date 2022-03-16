@@ -1,0 +1,7 @@
+es:
+  images:
+    image:
+      edit_link: 'Editar'
+      remove_link: 'Eliminar'
+    form:
+      send_button: 'Enviar'
