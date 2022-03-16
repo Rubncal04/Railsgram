@@ -30,6 +30,9 @@ gem 'popper_js'
 gem 'carrierwave'
 gem 'mini_magick'
 
+# Devise gem for Authentication
+gem 'devise'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
