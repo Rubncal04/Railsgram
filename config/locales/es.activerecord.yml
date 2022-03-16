@@ -1,6 +1,8 @@
 es:
   activerecord:
+    models:
+      image: 'Foto'
     attributes:
       image:
         description: 'Descripción'
-        picture: 'Imagen'
+        picture: 'Foto'

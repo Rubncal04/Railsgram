@@ -1,19 +1,10 @@
-<%-if @image.errors.any?%>
-  <div class="alert alert-danger">
-    <h4 class="alert-heading">Ups!</h4>
-    <p>You should add any description</p>
-  </div>
-<%end%>
-
 <div class="form-group">
-  <%=form_for @image do |f|%>
+  <%=form_for @image, builder: CustomFormBuilder do |f|%>
+    <%=f.form_error%>
+
     <%=f.label :description%><br>
-    <%=f.text_field :description, class: 'form-control'%><br>
-    <%-if @image.errors[:description].any?%>
-      <span class="badge badge-pill badge-danger">
-        <%=@image.errors[:description].first%>
-      </span>
-    <%end%>
+    <%=f.text_field :description, class: 'form-control'%>
+    <%=f.field_error :description%><br>
     <%=f.label :picture%><br>
     <%=f.file_field :picture%><br>
     <%=f.submit t('.send_button'), :class =>"btn btn-outline-primary"%>
