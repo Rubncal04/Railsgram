@@ -1,5 +1,33 @@
-<%-if user_signed_in?%>
-  <h1>Welcome <%=current_user.name%></h1>
-<%else%>
+<div class="container">
+  <%-if user_signed_in?%>
+  <p>My Photos</p>
+  <div class="row">
+    <div class="col-4">
+      <%=link_to "New Image", controller: "images", action: "new"%>
+
+    </div>
+    <div class="col-8">
+      <h1><%=current_user.name.capitalize()%></h1>
+      <div>
+        <ul class="nav">
+          <li class="margin-right">
+            <p><strong><%=@images.count%></strong> Publicaciones</p>
+          </li>
+          <li class="margin-right">
+            <p><strong>200</strong> Seguido</p>
+          </li>
+          <li class="margin-right">
+            <p><strong>500</strong> Seguidores</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <%=render @images%>
+  </div>
+
+  <%else%>
   <h1>Railsgram</h1>
-<%end%>
+  <%end%>
+</div>

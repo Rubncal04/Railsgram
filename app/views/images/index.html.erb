@@ -1,6 +1,10 @@
 <div class="container">
-  <p>My Photos</p>
-  <div class="row">
-    <%=render @images%>
-  </div>
+  <%-if user_signed_in?%>
+    <p>My Photos</p>
+    <div class="row">
+      <%=render @images%>
+    </div>
+  <%else%>
+    <h1>Railsgram</h1>
+  <%end%>
 </div>
